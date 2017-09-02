@@ -1,0 +1,26 @@
+@import '~bootstrap/scss/_variables.scss';
+
+$black: #000;
+$white: #fff;
+
+$gray-dark:                 #292b2c;
+$gray:                      #464a4c;
+$gray-light:                #666666;
+$gray-lighter:              #cccccc;
+$gray-lightest:             #f7f7f9;
+
+$brand-primary: #1c67a0;
+$brand-secondary: #3e7fb4;
+
+$btn-primary-bg: $white;
+$btn-primary-color: $brand-primary;
+$btn-primary-border: #065a95;
+
+$brand-danger: #c73434;
+
+$state-danger-text: $white;
+$state-danger-bg: #c73434;
+
+$border-radius: .6rem;
+$border-radius-lg: .55rem;
+$border-radius-sm: .45rem;

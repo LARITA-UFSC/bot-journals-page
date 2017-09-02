@@ -1,0 +1,55 @@
+<div>
+
+  <form (ngSubmit)="onFilter()" [formGroup]="filterForm" novalidate class="inverse">
+    <div class="row">
+      <div class="col-10">
+        <md-input-container class="fill-in-all mr-3">
+          <input mdInput type="text" placeholder="Insira do termo de busca" formControlName="term">
+        </md-input-container>
+
+      </div>
+      <div class="col-2 text-right">
+        <div class="mat-input-infix">
+          <button md-raised-button type="submit" class="search fill-in-all">Buscar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div class="block documents">
+
+    <div class="row" *ngIf="!documents || documents?.length === 0">
+      <div class="col-12">
+
+        <div class="documents-empty text-center mx-auto">
+          
+          <md-progress-spinner *ngIf="loading" mode="indeterminate" color="accent" class="mx-auto"></md-progress-spinner>
+          <!-- <h2 *ngIf="loading" class="mt-2">Carregando...</h2> -->
+
+          <span class="empty-results" *ngIf="emptySearch">          
+            <h2>Você não fez nenhuma busca!</h2>
+          </span>
+      
+          <span class="empty-results" *ngIf="!emptySearch && documents?.length === 0 && !loading">          
+            <h2>Nenhum documento encontrado!</h2>
+          </span>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="documents-items mt-4">
+
+        <ng-container *ngFor="let document of documents; let i=index">
+          <div class="documents-item">
+            <h5>
+              <a href="{{document.url_pdf}}">{{document.title}}</a>
+            </h5>
+            <h6 class="text-right">{{document.journal_display}}</h6>
+            <p class="text-justify">{{document.summary}}</p>
+          </div>
+        </ng-container>
+ 
+    </div>
+  </div>
+</div>

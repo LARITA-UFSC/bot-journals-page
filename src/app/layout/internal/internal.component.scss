@@ -1,0 +1,47 @@
+@import 'src/assets/css/_colors.scss';
+
+.internal {
+  background: #f3f3f3;
+  min-height: 100%;
+}
+
+header {
+  background: $brand-primary;
+  background: linear-gradient(to left, $brand-primary, $brand-secondary);
+  color: $white;
+  height: 448px;
+
+  .fa.toggle-menu {
+    cursor: pointer;
+  }
+}
+
+main {
+  margin-top: -330px;
+  min-height: 330px;
+}
+
+.logo-tribunal-wrapper {
+  background: $white;
+  border-radius: $border-radius;
+  color: $brand-secondary;
+  display: inline-block;
+  font-weight: bold;
+  padding: 12px;
+}
+
+footer {
+  border-top: 1px solid darken($white, 9%);
+  margin-top: 60px;
+
+  > .container {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  .central {
+    color: #58595a;
+    font-size: 1.25rem;
+    text-align: right;
+  }
+}

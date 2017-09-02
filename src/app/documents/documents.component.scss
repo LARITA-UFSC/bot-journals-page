@@ -1,0 +1,120 @@
+@import '~bootstrap/scss/mixins/_breakpoints.scss';
+@import '../../assets/css/_colors.scss';
+
+$border-color: rgba(black, .3);
+
+form {
+  margin-bottom: 1rem;
+
+  button.search {
+    position: absolute;
+    right: 15px;
+    top: 0;
+  }
+}
+
+.documents {
+  min-height: 340px;
+
+  .documents-empty {
+    color: $gray-lighter;
+    margin-top: 120px;
+
+    .mat-progress-spinner {
+      height: 150px;
+      width: 150px;
+    }
+
+    .logo {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.documents-items {
+  ul {
+    padding-left: 0;
+  }
+
+  .line {
+    border: 3px solid $gray-lighter;
+    display: block;
+    float: right;
+    height: 100%;
+    margin-right: -30px;
+    width: 0;
+  }
+
+  .documents-item {
+    .fa.fa-circle {
+      border-radius: 1rem;
+      border: 6px solid $gray-lighter;
+      color: $white;
+      float: left;
+      font-size: 8px;
+      left: 2px;
+      position: absolute;
+      top: 20px;
+    }
+
+    h2 {
+      color: $brand-primary;
+      font-size: 3rem;
+    }
+
+    h5 {
+      color: $gray-light;
+    }
+
+    .label {
+      color: $gray-light;
+      display: block;
+    }
+
+    p {
+      font-size: 0.85rem;
+    }
+
+    a {
+      color: $brand-primary;
+    }
+
+    @include media-breakpoint-down ('md') {
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      h5 {
+        font-size: .9rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+      }
+    }
+
+    @include media-breakpoint-down ('xs') {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h5 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+      }
+    }
+
+    .content {
+      background: $gray-lighter;
+      border-radius: $border-radius;
+      color: $black;
+      font-weight: bold;
+      margin-bottom: 4rem;
+      margin-left: 1rem;
+      padding: 20px;
+    }
+  }
+}

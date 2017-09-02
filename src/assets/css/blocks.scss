@@ -1,0 +1,7 @@
+@import './_colors.scss';
+
+.block {
+  background: $white;
+  border-radius: $border-radius;
+  padding: $spacer ($spacer * 1.25);
+}

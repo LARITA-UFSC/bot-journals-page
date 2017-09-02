@@ -1,0 +1,164 @@
+@import '~@angular/material/_theming.scss';
+
+@include mat-core();
+
+$mat-white-custom: (
+  50: #ffffff,
+  100: #ffffff,
+  200: #ffffff,
+  300: #ffffff,
+  400: #ffffff,
+  500: #ffffff,
+  600: #ffffff,
+  700: #ffffff,
+  800: #ffffff,
+  900: #ffffff,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffffff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$mat-gray-custom: (
+  50 : #f9f9f9,
+  100 : #f0f0f0,
+  200 : #e6e6e6,
+  300 : #dbdbdb,
+  400 : #d4d4d4,
+  500 : #cccccc,
+  600 : #c7c7c7,
+  700 : #c0c0c0,
+  800 : #b9b9b9,
+  900 : #adadad,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #fffcfc,
+  A700 : #ffe2e2,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #000000,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+$mat-yellow-custom: (
+  50 : #fef8e4,
+  100 : #fdedbb,
+  200 : #fce18e,
+  300 : #fbd461,
+  400 : #facb3f,
+  500 : #f9c21d,
+  600 : #f8bc1a,
+  700 : #f7b415,
+  800 : #f6ac11,
+  900 : #f59f0a,
+  A100 : #ffffff,
+  A200 : #fff7eb,
+  A400 : #ffe2b8,
+  A700 : #ffd89e,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #000000,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+$mat-dark-theme-background: (
+  status-bar: black,
+  app-bar:    map_get($mat-grey, 900),
+  background: #303030,
+  hover:      rgba(white, 0.04),
+  card:       map_get($mat-grey, 800),
+  dialog:     map_get($mat-grey, 800),
+  disabled-button: $white-12-opacity,
+  raised-button: #ffffff,
+  focused-button: $white-6-opacity,
+  selected-button: map_get($mat-grey, 900),
+  selected-disabled-button: map_get($mat-grey, 800),
+  disabled-button-toggle: map_get($mat-grey, 1000),
+);
+
+$mat-dark-theme-foreground: (
+  base:              white,
+  divider:           $white-12-opacity,
+  dividers:          $white-12-opacity,
+  disabled:          rgba(white, 0.7),
+  disabled-button:   rgba(white, 0.7),
+  disabled-text:     rgba(white, 0.7),
+  hint-text:         rgba(white, 0.7),
+  secondary-text:    rgba(white, 0.7),
+  icon:              white,
+  icons:             white,
+  text:              white,
+  slider-off:        rgba(white, 0.7),
+  slider-off-active: rgba(white, 0.7),
+);
+
+$default-primary: mat-palette($mat-white-custom);
+$default-accent: mat-palette($mat-gray-custom);
+$default-warn: mat-palette($mat-yellow-custom);
+
+$default-theme: mat-dark-theme($default-primary, $default-accent, $default-warn);
+
+@include angular-material-theme($default-theme);
+
+body {
+  .mat-datepicker-toggle {
+    background: transparent;
+    padding: 0;
+  }
+
+  .mat-input-element {
+    color: #ffffff;
+  }
+
+  .mat-input-invalid button.fa {
+    color: map-get($mat-yellow-custom, 500);
+  }
+
+  .internal {
+    .mat-button, .mat-raised-button {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 2px 26px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import '_colors.scss';
+
+body,
+html {
+  height: 100%;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.single-page {
+  .btn.btn-primary {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.fill-in-all {
+  width: 100%;
+}
+
+body {
+  .inverse {
+    color: $white;
+
+    button {
+      color: $brand-primary;
+
+      &.fa {
+        color: $white;
+      }
+    }
+  }
+}
+
+input:-webkit-autofill {
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    transition-delay: 9999s;
+    transition-property: background-color, color;
+  }
+}

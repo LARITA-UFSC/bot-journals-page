@@ -1,0 +1,25 @@
+.single-page {
+  background-color: #1c67a0;
+  // background-image: url('../../../assets/img/login/background.png');
+  background-position: top;
+  background-repeat: no-repeat;
+  color: #fff;
+  min-height: 100%;
+}
+
+.single-container {
+  margin: 0 auto;
+  padding-top: 140px;
+}
+
+label {
+  color: #fff;
+}
+
+.btn.btn-primary {
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 16px 0;
+  text-transform: uppercase;
+  width: 100%;
+}
