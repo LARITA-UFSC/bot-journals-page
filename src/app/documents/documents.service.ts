@@ -12,7 +12,7 @@ export class DocumentsService {
     try {
 
       const params = new URLSearchParams();
-      params.set('title__icontains', term);
+      params.set('search', term);
 
       const url = `${environment.api}/documents/?${params.toString()}`;
       const response = await this.http.get(url).toPromise()
