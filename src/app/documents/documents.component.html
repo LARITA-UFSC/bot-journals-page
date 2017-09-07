@@ -38,14 +38,16 @@
       </div>
     </div>
 
-    <div class="documents-items mt-4">
-
+    <div class="documents-items mt-4" *ngIf="documents?.length > 0">
+        <div class="text-right">
+          Total de registros econtrados: {{documents?.length}}
+        </div>
+        <hr>
         <ng-container *ngFor="let document of documents; let i=index">
           <div class="documents-item">
-            <h5>
-              <a href="{{document.url_pdf}}">{{document.title}}</a>
-            </h5>
-            <h6 class="text-right">{{document.journal_display}}</h6>
+            <h4><a href="{{document.url_pdf}}">{{document.title}}</a></h4>
+            <h6 class="text-right">{{document.authors}}</h6>
+            <h6 class="text-right">{{document.journal}}</h6>
             <p class="text-justify">{{document.summary}}</p>
           </div>
         </ng-container>
